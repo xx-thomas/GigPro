@@ -17,3 +17,4 @@ Rails version: 7.1.1
 
 (For Testing)
 3. bundle exec cucumber
+4. bundle exec rspec

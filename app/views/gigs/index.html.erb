@@ -1,1 +1,14 @@
-<h1>Welcome to GigPro</h1>
+<h1>Gigs</h1>
+
+<ul>
+  <% @gigs.each do |gig| %>
+    <li>
+      <%= gig.title %>
+	  <%= gig.description %>
+	  <%= gig.location %>
+	  <%= gig.payment %>
+	  <%= gig.deadline %>
+	  <%= gig.customer %>
+    </li>
+  <% end %>
+</ul>

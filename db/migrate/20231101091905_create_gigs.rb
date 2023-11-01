@@ -1,6 +1,6 @@
-class CreateJobs < ActiveRecord::Migration[7.1]
+class CreateGigs < ActiveRecord::Migration[7.1]
   def change
-    create_table :jobs do |t|
+    create_table :gigs do |t|
       t.string :title
       t.string :description
       t.string :location

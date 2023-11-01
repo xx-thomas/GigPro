@@ -16,8 +16,14 @@ class GigsController < ApplicationController
     if @gig.save
       redirect_to @gig
     else
-      render :new, status: :unprocessable_entity # On failure goes back to New aka beginning with status unprocessable
+      render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @gig = Gig.find(params[:id])
+    @gig.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private

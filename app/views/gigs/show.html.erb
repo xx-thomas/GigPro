@@ -5,3 +5,9 @@
 <h1><%= @gig.deadline %></h1>
 <h1><%= @gig.customer_id %></h1>
 
+<ul>
+  <li><%= link_to "Destroy", gig_path(@gig), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

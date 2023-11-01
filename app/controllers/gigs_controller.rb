@@ -12,7 +12,7 @@ class GigsController < ApplicationController
 	end
 
 	def create
-		@gig = Gig.new(title:"...", description:"...")
+		@gig = Gig.new(title:"..", description:"...")
 		if @gig.save
       redirect_to @gig
     else

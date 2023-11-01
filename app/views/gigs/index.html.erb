@@ -3,12 +3,14 @@
 <ul>
   <% @gigs.each do |gig| %>
     <li>
-			<%= link_to gig.title, gig %>
+		<%= link_to gig.title, gig %>
 	  	<%= gig.description %>
 	  	<%= gig.location %>
 	  	<%= gig.payment %>
 	  	<%= gig.deadline %>
-	  	<%= gig.customer %>
+	  	<%= gig.customer_id %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Gig", new_gig_path %>

@@ -1,9 +1,17 @@
 <h1>New Gig</h1>
 
 <%= form_with model: @gig do |form| %>
+	<div>
+    <%= form.label :customer_id %><br>
+    <%= form.number_field :customer_id %>
+  </div>
+
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
+	<% @gig.errors.full_messages_for(:title).each do |message| %>
+		<div><%= message %></div>
+	<% end %>
   </div>
 
   <div>
@@ -19,6 +27,9 @@
   <div>
     <%= form.label :payment %><br>
     <%= form.number_field :payment %>
+	<% @gig.errors.full_messages_for(:payment).each do |message| %>
+		<div><%= message %></div>
+	<% end %>
   </div>
 
   <div>

@@ -1,3 +1,6 @@
 class Gig < ApplicationRecord
-  belongs_to :customer
+	validates :title, presence: true
+	validates :payment, presence: true
+	
+  #belongs_to :customer
 end

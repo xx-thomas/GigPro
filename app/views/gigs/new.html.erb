@@ -1,0 +1,32 @@
+<h1>New Gig</h1>
+
+<%= form_with model: @gig do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :payment %><br>
+    <%= form.number_field :payment %>
+  </div>
+
+  <div>
+    <%= form.label :deadline %><br>
+    <%= form.datetime_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

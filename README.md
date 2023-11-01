@@ -16,4 +16,4 @@ Rails version: 7.1.1
 2. bin/rails server
 
 (For Testing)
-3. cucumber
+3. bundle exec cucumber

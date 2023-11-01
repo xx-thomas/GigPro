@@ -8,7 +8,7 @@ class GigsController < ApplicationController
   end
 
   def new
-    @gig = Gig.new # Used for the form
+    @gig = Gig.new
   end
 
   def create

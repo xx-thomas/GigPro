@@ -23,7 +23,7 @@ class GigsController < ApplicationController
   def destroy
     @gig = Gig.find(params[:id])
     @gig.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to action: "index", status: :see_other
   end
 
   private

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  location: MyString
+  payment: 9.99
+  deadline: 2023-11-01 05:19:05
+  customer: one
+
+two:
+  title: MyString
+  description: MyString
+  location: MyString
+  payment: 9.99
+  deadline: 2023-11-01 05:19:05
+  customer: two

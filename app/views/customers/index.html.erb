@@ -1,0 +1,14 @@
+<h1>Customers</h1>
+
+<ul>
+  <% @customers.each do |customer| %>
+    <li>
+			Customer: <%= customer.name %>,
+	  	Location: <%= customer.location %>,
+	  	Contact: <%= customer.number %>, 
+			Balance: <%= customer.balance %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Customer", new_customer_path %>

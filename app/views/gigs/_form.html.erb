@@ -1,0 +1,49 @@
+<%= form_with model: gig do |form| %>
+	<div>
+    <%= form.label :customer_id %><br>
+    <%= form.number_field :customer_id %>
+		<% gig.errors.full_messages_for(:customer_id).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
+  </div>
+
+	<div>
+    <%= form.label :worker_id %><br>
+    <%= form.number_field :worker_id %>
+  </div>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+	<% gig.errors.full_messages_for(:title).each do |message| %>
+		<div><%= message %></div>
+	<% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :payment %><br>
+    <%= form.number_field :payment %>
+	<% gig.errors.full_messages_for(:payment).each do |message| %>
+		<div><%= message %></div>
+	<% end %>
+  </div>
+
+  <div>
+    <%= form.label :deadline %><br>
+    <%= form.datetime_field :deadline %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

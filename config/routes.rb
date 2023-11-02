@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 	
 	resources :customers
 	resources :workers
-	resources :gigs
+	resources :gigs do
+		member do
+			post 'complete'
+		end
+	end
   # Defines the root path route ("/")
   # root "posts#index"
 end

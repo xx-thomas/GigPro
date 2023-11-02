@@ -9,7 +9,9 @@
 
 <ul>
 	<li><%= link_to "Edit", edit_gig_path(@gig) %></li>
-  <li><%= link_to "Destroy", gig_path(@gig), data: {
+  <li><%= link_to "Complete", complete_gig_path(@gig), data: { turbo_method: :post } %></li>
+
+	<li><%= link_to "Destroy", gig_path(@gig), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>

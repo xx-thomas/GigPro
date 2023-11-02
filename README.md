@@ -1,4 +1,4 @@
-**Members**
+**Members** 
 
 Lidia Toledo (lrt2131)
 Mauricio Gonzalez (mg4148)
@@ -20,6 +20,5 @@ Rails version: 7.1.1
 4. bundle exec rspec
 
 
-Using GigPro
-
-1. 
+**Heroku link**
+https://enigmatic-mountain-39586-866bb6cfddd9.herokuapp.com/

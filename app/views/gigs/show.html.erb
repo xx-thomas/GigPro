@@ -4,8 +4,11 @@
 <h1>Payment: <%= @gig.payment %></h1>
 <h1>Deadline: <%= @gig.deadline %></h1>
 <h1>Customer ID: <%= @gig.customer_id %></h1>
+<h1>Assigned Worker ID: <%= @gig.worker_id %></h1>
+
 
 <ul>
+	<li><%= link_to "Edit", edit_gig_path(@gig) %></li>
   <li><%= link_to "Destroy", gig_path(@gig), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"

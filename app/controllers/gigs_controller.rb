@@ -26,9 +26,23 @@ class GigsController < ApplicationController
     redirect_to action: "index", status: :see_other
   end
 
+	def edit
+    @gig = Gig.find(params[:id])
+  end
+
+  def update
+    @gig = Gig.find(params[:id])
+
+    if @gig.update(gig_params)
+      redirect_to @gig
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
     def gig_params
-      params.require(:gig).permit(:title, :description, :location, :payment, :deadline, :customer_id)
+      params.require(:gig).permit(:title, :description, :location, :payment, :deadline, :customer_id, :worker_id)
     end
 
 end

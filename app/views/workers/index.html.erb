@@ -1,0 +1,15 @@
+<h1>Workers</h1>
+
+<ul>
+  <% @workers.each do |worker| %>
+    <li>
+			<%= worker.name %>
+	  	<%= worker.location %>
+	  	<%= worker.number %>
+			<%= worker.language_preference %>
+			<%= worker.rating %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Worker", new_worker_path %>

@@ -4,6 +4,9 @@
 	<div>
     <%= form.label :customer_id %><br>
     <%= form.number_field :customer_id %>
+		<% @gig.errors.full_messages_for(:customer_id).each do |message| %>
+			<div><%= message %></div>
+		<% end %>
   </div>
 
   <div>

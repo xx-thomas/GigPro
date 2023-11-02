@@ -23,6 +23,10 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   expect(page).to have_content(text)
 end
 
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  expect(page).not_to have_content(text)
+end
+
 Given /the following customers exist/ do |customers_table|
   customers_table.hashes.each do |customer|
     Customer.create!(customer)

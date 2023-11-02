@@ -31,4 +31,32 @@ Scenario: create gig
 	And I should see "Payment: 10"
 	And I should see "Customer ID: 1"
 	And I should see "Assigned Worker ID: 1"
-	
+
+Scenario: create gig without customer and fail
+	When I follow "New Gig"
+	And I fill in "gig_title" with "TestGig"
+	And I fill in "gig_description" with "TestDescription"
+	And I fill in "gig_location" with "NY"
+	And I fill in "gig_payment" with "10"
+	And I press "Create Gig"
+	Then I should see "Customer can't be blank"
+
+Scenario: create gig without title and fail
+	When I follow "New Gig"
+	And I fill in "gig_customer_id" with "1"
+	And I fill in "gig_worker_id" with "1"
+	And I fill in "gig_description" with "TestDescription"
+	And I fill in "gig_location" with "NY"
+	And I fill in "gig_payment" with "10"
+	And I press "Create Gig"
+	Then I should see "Title can't be blank"
+
+Scenario: create gig without payment and fail
+	When I follow "New Gig"
+	And I fill in "gig_customer_id" with "1"
+	And I fill in "gig_worker_id" with "1"
+	And I fill in "gig_title" with "TestGig"
+	And I fill in "gig_description" with "TestDescription"
+	And I fill in "gig_location" with "NY"
+	And I press "Create Gig"
+	Then I should see "Payment can't be blank"

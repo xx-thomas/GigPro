@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_02_013802) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_02_020444) do
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.decimal "balance"
+    t.decimal "balance", default: "0.0"
   end
 
   create_table "gigs", force: :cascade do |t|
@@ -42,7 +42,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_02_013802) do
     t.decimal "rating", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.decimal "balance"
+    t.decimal "balance", default: "0.0"
   end
 
   add_foreign_key "gigs", "customers"

@@ -3,9 +3,9 @@
 <ul>
   <% @customers.each do |customer| %>
     <li>
-			<%= customer.name %>
-	  	<%= customer.location %>
-	  	<%= customer.number %>
+			Customer: <%= customer.name %>,
+	  	Location: <%= customer.location %>,
+	  	Contact: <%= customer.number %>
     </li>
   <% end %>
 </ul>

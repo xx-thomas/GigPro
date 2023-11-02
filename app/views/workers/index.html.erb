@@ -3,11 +3,10 @@
 <ul>
   <% @workers.each do |worker| %>
     <li>
-			<%= worker.name %>
-	  	<%= worker.location %>
-	  	<%= worker.number %>
-			<%= worker.language_preference %>
-			<%= worker.rating %>
+			Worker: <%= worker.name %>,
+	  	Location: <%= worker.location %>,
+	  	Contact: <%= worker.number %>,
+			Rating: <%= worker.rating %>
     </li>
   <% end %>
 </ul>

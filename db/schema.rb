@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_01_121815) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_02_012202) do
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_01_121815) do
     t.string "location"
     t.decimal "payment"
     t.datetime "deadline"
-    t.integer "customer_id"
+    t.integer "customer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_gigs_on_customer_id"
@@ -36,7 +36,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_01_121815) do
     t.string "location"
     t.string "number"
     t.string "language_preference"
-    t.decimal "rating"
+    t.decimal "rating", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

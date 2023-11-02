@@ -1,9 +1,9 @@
-<h1><%= @gig.title %></h1>
-<h1><%= @gig.description %></h1>
-<h1><%= @gig.location %></h1>
-<h1><%= @gig.payment %></h1>
-<h1><%= @gig.deadline %></h1>
-<h1><%= @gig.customer_id %></h1>
+<h1>Gig: <%= @gig.title %></h1>
+<h1>Description: <%= @gig.description %></h1>
+<h1>Location: <%= @gig.location %></h1>
+<h1>Payment: <%= @gig.payment %></h1>
+<h1>Deadline: <%= @gig.deadline %></h1>
+<h1>Customer ID: <%= @gig.customer_id %></h1>
 
 <ul>
   <li><%= link_to "Destroy", gig_path(@gig), data: {

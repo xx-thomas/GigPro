@@ -12,7 +12,6 @@
   <li><%= link_to "Complete", complete_gig_path(@gig), data: { turbo_method: :post } %></li>
 
 	<li><%= link_to "Destroy", gig_path(@gig), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
+                    turbo_method: :delete
                   } %></li>
 </ul>

@@ -1,1 +1,7 @@
-<%= @user.name %>, <%= @user.email %>
+<% provide(:title, "Profile") %>
+<div class="center jumbotron">
+<h1> Profile </h1>
+<h3>Name: <%= @user.name %></h3>
+<h3>Email: <%= @user.email %></h3>
+
+</div>

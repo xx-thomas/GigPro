@@ -47,8 +47,8 @@ class GigsController < ApplicationController
 		Worker.update(@gig.worker_id, :balance => gig_worker.balance + @gig.payment, :rating => gig_worker.rating + 1)
 		Customer.update(@gig.customer_id, :balance => gig_customer.balance - @gig.payment)
 		@gig.destroy
-		flash[:notice] = "Gig: '#{@gig.title}' was completed!."
-		redirect_to action: "index", status: :see_other
+		flash[:success] = "Gig: '#{@gig.title}' was completed!."
+		redirect_to action: "index"
 	end
 
   private

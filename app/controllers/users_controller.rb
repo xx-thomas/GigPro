@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 	def create
     @user = User.new(user_params)
     if @user.save
-			flash[:success] = "Welcome to GigPro"
+			flash[:success] = "Welcome to GigPro '#{@user.name}'"
       redirect_to @user
 			#redirect_to controller: :gigs, action: :index
     else

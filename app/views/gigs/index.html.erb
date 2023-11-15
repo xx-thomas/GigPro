@@ -3,7 +3,7 @@
 <h1>Gigs</h1>
 <ul>
   <% @gigs.each do |gig| %>
-    <li>
+    <li style="list-style-type: none;">
       Gig: <%= link_to gig.title, gig %>, 
       Location: <%= gig.location %>,
       Payment: <%= gig.payment %>,

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   # get 'users/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 	root "gigs#index"
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
 	#   get "/gigs", to: "gigs#index"
 	#   get "/gigs/:id", to: "gigs#show"
 	get "/signup", to: "users#new"
+	get "/login", to:"sessions#new"
+	post "/login", to:"sessions#create"
+	delete "/logout", to:"sessions#destroy"
 	resources :customers
 	resources :workers
 	resources :gigs do

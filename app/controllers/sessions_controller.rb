@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
 		else
 			flash.now[:danger] = 'Invalid email/password!'
 			render :new, status: unprocessable_entity
+		end
 	end
-
-	def destroy
 end

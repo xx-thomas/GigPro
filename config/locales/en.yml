@@ -28,4 +28,11 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  hello: "English"
+  customer_id: "Customer ID"
+  worker_id: "Worker ID"
+  title: "Title"
+  description: "Description"
+  location: "Location"
+  payment: "Payment"
+  deadline: "Deadline"

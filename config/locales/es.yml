@@ -1,0 +1,9 @@
+es:
+  hello: "Spanish"
+  customer_id: "Identificación del cliente"
+  worker_id: "Identificación del trabajador"
+  title: "Título"
+  description: "Descripción"
+  location: "Ubicación"
+  payment: "Pago"
+  deadline: "Fecha límite"

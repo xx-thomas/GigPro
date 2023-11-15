@@ -16,4 +16,7 @@ Rails.application.routes.draw do
 	end
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Route for changing language
+  get '/change_language', to: 'application#change_language', as: :change_language
 end

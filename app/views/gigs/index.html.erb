@@ -1,4 +1,7 @@
 <h1>Gigs</h1>
+<p>Current language: <%= session[:locale] %></p>
+<%= link_to "English", change_language_path(locale: 'en'), method: :post %>
+<%= link_to "Español", change_language_path(locale: 'es'), method: :post %>
 
 <ul>
   <% @gigs.each do |gig| %>
@@ -12,3 +15,5 @@
 </ul>
 
 <%= link_to "New Gig", new_gig_path %>
+
+<h3> <%= t(:hello)%></h3>

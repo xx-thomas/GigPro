@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	resources :gigs do
 		member do
 			post 'complete'
+			post 'accept'
 		end
 	end
 	resources :users

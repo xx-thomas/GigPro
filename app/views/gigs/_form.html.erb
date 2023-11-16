@@ -1,17 +1,4 @@
 <%= form_with model: gig do |form| %>
-	<div>
-    <%= form.label t(:customer_id) %><br>
-    <%= form.number_field :customer_id %>
-		<% gig.errors.full_messages_for(:customer_id).each do |message| %>
-			<div><%= message %></div>
-		<% end %>
-  </div>
-
-	<div>
-    <%= form.label t(:worker_id) %><br>
-    <%= form.number_field :worker_id %>
-  </div>
-
   <div>
     <%= form.label t(:title) %><br>
     <%= form.text_field :title %>

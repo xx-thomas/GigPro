@@ -1,15 +1,15 @@
-<h1>Workers</h1>
+<h1><%=t(:workers)%></h1>
 
 <ul>
   <% @workers.each do |worker| %>
     <li>
-			Worker: <%= worker.name %>,
-	  	Location: <%= worker.location %>,
-	  	Contact: <%= worker.number %>,
-			Rating: <%= worker.rating %>,
-			Balance: <%= worker.balance %>
+		<%=t(:workers): worker.name %>,
+	  	<%=t(:location): worker.location %>,
+	  	<%=t(:contact): worker.number %>,
+		<%=t(:rating): worker.rating %>,
+		<%=t(:balance): worker.balance %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Worker", new_worker_path %>
+<%= link_to t(:new_worker), new_worker_path %>

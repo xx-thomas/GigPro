@@ -1,17 +1,17 @@
-<h1>Gig: <%= @gig.title %></h1>
-<h1>Description: <%= @gig.description %></h1>
-<h1>Location: <%= @gig.location %></h1>
-<h1>Payment: <%= @gig.payment %></h1>
-<h1>Deadline: <%= @gig.deadline %></h1>
-<h1>Customer ID: <%= @gig.customer_id %></h1>
-<h1>Assigned Worker ID: <%= @gig.worker_id %></h1>
+<h1><%=t(:gig): @gig.title %></h1>
+<h1><%=t(:description): @gig.description %></h1>
+<h1><%=t(:location): @gig.location %></h1>
+<h1><%=t(:payment): @gig.payment %></h1>
+<h1><%=t(:deadline): @gig.deadline %></h1>
+<h1><%=t(:customer_id): @gig.customer_id %></h1>
+<h1><%=t(:worker_id): @gig.worker_id %></h1>
 
 
 <ul>
-	<li><%= link_to "Edit", edit_gig_path(@gig) %></li>
-  <li><%= link_to "Complete", complete_gig_path(@gig), data: { turbo_method: :post } %></li>
+	<li><%= link_to t(:edit), edit_gig_path(@gig) %></li>
+  <li><%= link_to t(:complete), complete_gig_path(@gig), data: { turbo_method: :post } %></li>
 
-	<li><%= link_to "Destroy", gig_path(@gig), data: {
+	<li><%= link_to t(:delete), gig_path(@gig), data: {
                     turbo_method: :delete
                   } %></li>
 </ul>

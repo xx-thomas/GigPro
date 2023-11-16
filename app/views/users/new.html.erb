@@ -1,34 +1,34 @@
-<% provide(:title, "Sign Up") %>
+<% provide(:title, t(:sign_up)) %>
 <div class="center jumbotron">
-<h1>Sign up</h1>
+<h1><%=t(:sign_up)%></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with model: @user do |form| %>
-      <%= form.label :name %>
+      <%= form.label t(:name) %>
       <%= form.text_field :name %>
 			<% @user.errors.full_messages_for(:name).each do |message| %>
 				<div><%= message %></div>
 			<% end %>
 
-      <%= form.label :email %>
+      <%= form.label t(:email) %>
       <%= form.email_field :email %>
 			<% @user.errors.full_messages_for(:email).each do |message| %>
 				<div><%= message %></div>
 			<% end %>
 
-      <%= form.label :password %>
+      <%= form.label t(:password) %>
       <%= form.password_field :password %>
 			<% @user.errors.full_messages_for(:password).each do |message| %>
 				<div><%= message %></div>
 			<% end %>
 
-      <%= form.label :password_confirmation, "Confirmation" %>
+      <%= form.label :password_confirmation, t(:password_confirmation) %>
       <%= form.password_field :password_confirmation %>
 			<% @user.errors.full_messages_for(:password_confirmation).each do |message| %>
 				<div><%= message %></div>
 			<% end %>
 
-      <%= form.submit "Create my account", class: "btn btn-primary" %>
+      <%= form.submit t(:create_my_account), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

@@ -16,19 +16,21 @@
         <%= link_to "GigPro", root_path, id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Gigs", root_path %></li>
+              <li><%= link_to t(:gigs), root_path  %></li>
 							<% if logged_in? %>
 							<li class="dropdown">
-								<a href="#" id="account" class="dropdown-toggle"> Account <b class="caret"></b> </a>
+								<a href="#" id="account" class="dropdown-toggle"> <%=t(:account) %><b class="caret"></b> </a>
 								<ul id="dropdown-menu" class="dropdown-menu">
-									<li><%= link_to "Profile", current_user %></li>
+									<li><%= link_to t(:profile), current_user %></li>
 									<li class="divider"></li>
-									<li> <%= link_to "Log out", logout_path, data: { "turbo-method": :delete } %> </li>
+									<li> <%= link_to t(:log_out), logout_path, data: { "turbo-method": :delete } %> </li>
             		</ul>
 							</li>
 							<% else %>
-								<li><%= link_to "Log in", login_path %></li>
+								<li><%= link_to t(:log_in), login_path %></li>
 							<%end %>
+              <li><%= link_to "English", change_language_path(locale: 'en'), method: :post %></li>
+              <li><%= link_to "Español", change_language_path(locale: 'es'), method: :post %></li>
 						</ul>
         </nav>
       </div>

@@ -17,4 +17,8 @@ module SessionsHelper
 	def logged_in?
 		!current_user.nil?
 	end
+	# For later use, if we want to redirect after login
+	# def store_location
+	# 	session[:forwarding_url] = request.original_url if request.get? 
+	# end
 end

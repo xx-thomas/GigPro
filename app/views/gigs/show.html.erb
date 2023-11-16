@@ -3,15 +3,19 @@
 <h1><%=t(:location)%>: <%=  @gig.location %></h1>
 <h1><%=t(:payment)%>: <%=  @gig.payment %></h1>
 <h1><%=t(:deadline)%>: <%=  @gig.deadline %></h1>
-<h1><%=t(:customer_id)%>: <%=  @gig.customer_id %></h1>
-<h1><%=t(:worker_id)%>: <%=  @gig.worker_id %></h1>
+<h1><%=t(:customer)%>: <%=  @customer.name %></h1>
+<h1><%=t(:worker)%>: <%=  @worker.name %></h1>
 
 
-<ul>
-	<li><%= link_to t(:edit), edit_gig_path(@gig) %></li>
-  <li><%= link_to t(:complete), complete_gig_path(@gig), data: { turbo_method: :post } %></li>
-
-	<li><%= link_to t(:delete), gig_path(@gig), data: {
-                    turbo_method: :delete
-                  } %></li>
-</ul>
+<% if @gig.worker_id.nil? %>
+<% if current_user == @customer %>
+<%= link_to t(:edit), edit_gig_path(@gig), class: "btn btn-primary btn-lg" %>
+<%= link_to t(:delete), gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :delete} %>
+<% else %>
+<%= link_to t(:accept),  accept_gig_path(@gig), class: "btn btn-warning btn-lg", data: { turbo_method: :post } %>
+<%end %>
+<% else %>
+<% if current_user == @customer %> 
+<%= link_to t(:complete), complete_gig_path(@gig), class: "btn btn-success btn-lg", data: { turbo_method: :post } %>
+<%end %>
+<%end %>

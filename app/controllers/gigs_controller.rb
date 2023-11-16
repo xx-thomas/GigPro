@@ -7,6 +7,10 @@ class GigsController < ApplicationController
 
   def show
     @gig = Gig.find(params[:id])
+		@customer = User.find(@gig.customer_id)
+		if !@gig.worker_id.nil?
+			@worker = User.find(@gig.worker_id)
+		end
   end
 
   def new
@@ -15,11 +19,20 @@ class GigsController < ApplicationController
 
   def create
     @gig = Gig.new(gig_params)
-    if @gig.save
-      redirect_to @gig
-    else
-      render :new, status: :unprocessable_entity
-    end
+		@gig.customer_id = current_user.id
+		
+		
+		if current_user.balance < @gig.payment || @gig.payment < 0 || !@gig.save
+			if @gig.payment < 0
+				flash.now[:danger] = "Payment needs to be positive"
+			end
+			if current_user.balance < @gig.payment
+				flash.now[:danger] = "You don't have enough balance!"
+			end
+			render :new, status: :unprocessable_entity
+		else
+			redirect_to @gig
+		end
   end
 
   def destroy
@@ -42,12 +55,17 @@ class GigsController < ApplicationController
     end
   end
 
+	def accept
+		@gig = Gig.find(params[:id])
+		Gig.update(@gig.id, :worker_id => current_user.id)
+	end
+
 	def complete
 		@gig = Gig.find(params[:id])
-		gig_worker = Worker.find(@gig.worker_id)
-		gig_customer = Customer.find(@gig.customer_id)
-		Worker.update(@gig.worker_id, :balance => gig_worker.balance + @gig.payment, :rating => gig_worker.rating + 1)
-		Customer.update(@gig.customer_id, :balance => gig_customer.balance - @gig.payment)
+		gig_worker = User.find(@gig.worker_id)
+		gig_customer = User.find(@gig.customer_id)
+		User.update(@gig.worker_id, :balance => gig_worker.balance + @gig.payment, :worker_rating => gig_worker.worker_rating + 1)
+		User.update(@gig.customer_id, :balance => gig_customer.balance - @gig.payment)
 		@gig.destroy
 		flash[:success] = "Gig: '#{@gig.title}' was completed!."
 		redirect_to action: "index"
@@ -70,7 +88,7 @@ class GigsController < ApplicationController
 
   private
     def gig_params
-      params.require(:gig).permit(:title, :description, :location, :payment, :deadline, :customer_id, :worker_id)
+      params.require(:gig).permit(:title, :description, :location, :payment, :deadline)
     end
 
 end

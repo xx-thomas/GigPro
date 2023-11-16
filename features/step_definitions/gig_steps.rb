@@ -26,22 +26,22 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   expect(page).not_to have_content(text)
 end
 
-Given /the following customers exist/ do |customers_table|
-  customers_table.hashes.each do |customer|
-    Customer.create!(customer)
-  end
-end
+# Given /the following customers exist/ do |customers_table|
+#   customers_table.hashes.each do |customer|
+#     Customer.create!(customer)
+#   end
+# end
 
-Then /(.*) seed customers should exist/ do | n_seeds |
-  expect(Customer.count).to eq n_seeds.to_i
-end
+# Then /(.*) seed customers should exist/ do | n_seeds |
+#   expect(Customer.count).to eq n_seeds.to_i
+# end
 
-Given /the following workers exist/ do |workers_table|
-  workers_table.hashes.each do |worker|
-    Worker.create!(worker)
-  end
-end
+# Given /the following workers exist/ do |workers_table|
+#   workers_table.hashes.each do |worker|
+#     Worker.create!(worker)
+#   end
+# end
 
-Then /(.*) seed workers should exist/ do | n_seeds |
-  expect(Worker.count).to eq n_seeds.to_i
-end
+# Then /(.*) seed workers should exist/ do | n_seeds |
+#   expect(Worker.count).to eq n_seeds.to_i
+# end

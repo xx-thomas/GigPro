@@ -3,8 +3,6 @@ module NavigationHelpers
     case page_name
 
     when /^the (GigPro )?home\s?page$/ then '/'
-    when /^the customers page$/ then '/customers'
-		when /^the workers page$/ then '/workers'
 		when /^the gigs page$/ then '/gigs'
 		when /^the users page$/ then '/users'
     else

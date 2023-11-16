@@ -1,4 +1,6 @@
 class GigsController < ApplicationController
+	before_action :logged_in_user, only:[:new, :edit, :destroy, :complete]
+	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
     @gigs = Gig.all
   end
@@ -49,6 +51,21 @@ class GigsController < ApplicationController
 		@gig.destroy
 		flash[:success] = "Gig: '#{@gig.title}' was completed!."
 		redirect_to action: "index"
+	end
+
+	def logged_in_user
+		unless logged_in?
+			flash[:danger] = "Please log in."
+			redirect_to login_url, status: :see_other
+		end
+	end
+
+	def correct_user
+		@user = User.find_by(params[:id])
+		unless @user == current_user
+			flash[:danger] = "This is not your gig!"
+			redirect_to(root_url, status: :see_other)
+		end
 	end
 
   private

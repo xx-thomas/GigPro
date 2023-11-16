@@ -1,14 +1,14 @@
-<h1>Customers</h1>
+<h1><%= t(:customers) %></h1>
 
 <ul>
   <% @customers.each do |customer| %>
     <li>
-			Customer: <%= customer.name %>,
-	  	Location: <%= customer.location %>,
-	  	Contact: <%= customer.number %>, 
-			Balance: <%= customer.balance %>
+      t(:customer): <%= customer.name %>,
+	  	t(:location): <%= customer.location %>,
+	  	t(:contact): <%= customer.number %>, 
+			t(:balance): <%= customer.balance %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Customer", new_customer_path %>
+<%= link_to t(:new_costumer), new_customer_path %>

@@ -1,14 +1,15 @@
-<h1>Gigs</h1>
-
+<% provide(:title, "Gigs") %>
+<div class="center jumbotron">
+<h1><%=t(:gigs) %></h1>
 <ul>
   <% @gigs.each do |gig| %>
-    <li>
-			Gig: <%= link_to gig.title, gig %>, 
-	  	Location: <%= gig.location %>,
-	  	Payment: <%= gig.payment %>,
-	  	Deadline: <%= gig.deadline %>
+    <li style="list-style-type: none;">
+      <%=t(:gig)%>: <%= link_to gig.title, gig %>, 
+      <%=t(:location)%>: <%= gig.location %>,
+      <%=t(:payment)%>: <%= gig.payment %>,
+      <%=t(:deadline)%>:  <%= gig.deadline %>
     </li>
   <% end %>
 </ul>
-
-<%= link_to "New Gig", new_gig_path %>
+<%= link_to t(:new_gig), new_gig_path %>
+</div>

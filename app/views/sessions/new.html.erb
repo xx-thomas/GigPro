@@ -1,0 +1,21 @@
+<% provide(:title, t(:log_in)) %>
+<div class="center jumbotron">
+<h1><%=t(:log_in)%></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: login_path, scope: :session) do |f| %>
+
+    <%= f.label t(:email) %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label t(:password) %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit t(:log_in), class: "btn btn-primary" %>
+  <% end %>
+
+  <p><%=t(:new_user)%> <%=link_to t(:create_account_now), signup_path %></p>
+ </div>
+</div>
+</div>

@@ -4,10 +4,10 @@
 <ul>
   <% @gigs.each do |gig| %>
     <li style="list-style-type: none;">
-      t(:gig): <%= link_to gig.title, gig %>, 
-      t(:location): <%= gig.location %>,
-      t(:payment): <%= gig.payment %>,
-      t(:deadline): <%= gig.deadline %>
+      <%=t(:gig)%>: <%= link_to gig.title, gig %>, 
+      <%=t(:location)%>: <%= gig.location %>,
+      <%=t(:payment)%>: <%= gig.payment %>,
+      <%=t(:deadline)%>:  <%= gig.deadline %>
     </li>
   <% end %>
 </ul>

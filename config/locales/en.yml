@@ -42,6 +42,7 @@ en:
   password: "Password"
   new_user: "New user"
   gigs: "Gigs"
+  gig: "Gig"
   account: "My account"
   profile: "Profile"
   log_out: "Log out"
@@ -65,4 +66,5 @@ en:
   workers: "Workers"
   rating: "Rating"
   create_account_now: "Create account now!"
+  new_user: "New user?"
   

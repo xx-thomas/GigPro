@@ -3,11 +3,11 @@
 <ul>
   <% @workers.each do |worker| %>
     <li>
-		<%=t(:workers): worker.name %>,
-	  	<%=t(:location): worker.location %>,
-	  	<%=t(:contact): worker.number %>,
-		<%=t(:rating): worker.rating %>,
-		<%=t(:balance): worker.balance %>
+		<%=t(:workers)%>: <%= worker.name %>,
+		<%=t(:location)%>: <%=worker.location %>,
+		<%=t(:number)%>: <%= worker.number %>,
+		<%=t(:rating)%>: <%= worker.rating %>,
+		<%=t(:balance)%>: <%= worker.balance %>
     </li>
   <% end %>
 </ul>

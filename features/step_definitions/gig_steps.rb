@@ -26,15 +26,21 @@ Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   expect(page).not_to have_content(text)
 end
 
-# Given /the following customers exist/ do |customers_table|
-#   customers_table.hashes.each do |customer|
-#     Customer.create!(customer)
-#   end
-# end
+Given /the following users exist/ do |users_table|
+  users_table.hashes.each do |user|
+    User.create!(user)
+  end
+end
 
-# Then /(.*) seed customers should exist/ do | n_seeds |
-#   expect(Customer.count).to eq n_seeds.to_i
-# end
+Then /(.*) seed users should exist/ do | n_seeds |
+  expect(User.count).to eq n_seeds.to_i
+end
+
+
+Given /^I wait for (\d+) seconds?$/ do |n|
+  sleep(n.to_i)
+end
+
 
 # Given /the following workers exist/ do |workers_table|
 #   workers_table.hashes.each do |worker|

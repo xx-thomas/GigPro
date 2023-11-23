@@ -22,8 +22,8 @@ class GigsController < ApplicationController
 		@gig.customer_id = current_user.id
 		
 		
-		if current_user.balance < @gig.payment || @gig.payment < 0 || !@gig.save
-			if @gig.payment < 0
+		if current_user.balance < @gig.payment || @gig.payment <= 0 || !@gig.save
+			if @gig.payment <= 0
 				flash.now[:danger] = "Payment needs to be positive"
 			end
 			if current_user.balance < @gig.payment

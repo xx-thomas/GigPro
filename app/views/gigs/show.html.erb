@@ -4,7 +4,9 @@
 <h1><%=t(:payment)%>: <%=  @gig.payment %></h1>
 <h1><%=t(:deadline)%>: <%=  @gig.deadline %></h1>
 <h1><%=t(:customer)%>: <%=  @customer.name %></h1>
-<h1><%=t(:worker)%>: <%=  @worker.name %></h1>
+<% if !@worker.nil? %>
+<h1><%=t(:worker)%>: <%=  @worker.name  %></h1>
+<%end %>
 
 
 <% if @gig.worker_id.nil? %>

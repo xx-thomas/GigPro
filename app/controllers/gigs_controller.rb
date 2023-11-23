@@ -1,5 +1,5 @@
 class GigsController < ApplicationController
-	before_action :logged_in_user, only:[:new, :edit, :destroy, :complete]
+	before_action :logged_in_user, only:[:new, :edit, :destroy, :complete, :accept]
 	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
     @gigs = Gig.all
@@ -58,6 +58,7 @@ class GigsController < ApplicationController
 	def accept
 		@gig = Gig.find(params[:id])
 		Gig.update(@gig.id, :worker_id => current_user.id)
+		redirect_to @gig
 	end
 
 	def complete
@@ -79,7 +80,8 @@ class GigsController < ApplicationController
 	end
 
 	def correct_user
-		@user = User.find_by(params[:id])
+		@gig = Gig.find(params[:id])
+		@user = User.find(@gig.customer_id)
 		unless @user == current_user
 			flash[:danger] = "This is not your gig!"
 			redirect_to(root_url, status: :see_other)

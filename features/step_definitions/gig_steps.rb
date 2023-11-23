@@ -42,12 +42,12 @@ Given /^I wait for (\d+) seconds?$/ do |n|
 end
 
 
-# Given /the following workers exist/ do |workers_table|
-#   workers_table.hashes.each do |worker|
-#     Worker.create!(worker)
-#   end
-# end
+Given /the following gigs exist/ do |gigs_table|
+  gigs_table.hashes.each do |gig|
+    Gig.create!(gig)
+  end
+end
 
-# Then /(.*) seed workers should exist/ do | n_seeds |
-#   expect(Worker.count).to eq n_seeds.to_i
-# end
+Then /(.*) seed gigs should exist/ do | n_seeds |
+  expect(Gig.count).to eq n_seeds.to_i
+end

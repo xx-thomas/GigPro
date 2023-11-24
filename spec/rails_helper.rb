@@ -5,6 +5,7 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'simplecov'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -29,6 +30,17 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
+SimpleCov.start 'rails' do
+  #initializes code for simplecov to calculate code coverage percentage.
+end
+
+#Gig Factory for rspec.
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+  # Other configurations...
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -37,6 +49,7 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  config.include AbstractController::Translation
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false

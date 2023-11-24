@@ -36,3 +36,27 @@ Scenario: complete gig
 	And I should see "Complete"
 	And I follow "Complete"
 	Then I am on the gigs page
+
+
+Scenario: edit gig
+	When I follow "Log in"
+	And I fill in "session_email" with "customer@mail.com"
+	And I fill in "session_password" with "customerpass"
+	And I press "Log in"
+	And I follow "Gigs"
+	And I follow "gig1"
+	And I should see "Edit"
+	And I follow "Edit"
+	Then I should see "Update gig"
+	And I press "Create gig"
+
+Scenario: destroy gig
+	When I follow "Log in"
+	And I fill in "session_email" with "customer@mail.com"
+	And I fill in "session_password" with "customerpass"
+	And I press "Log in"
+	And I follow "Gigs"
+	And I follow "gig1"
+	And I should see "Delete"
+	And I follow "Delete"
+	Then I am on the gigs page

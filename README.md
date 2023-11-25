@@ -5,7 +5,7 @@ Mauricio Gonzalez (mg4148)
 Stacey Yao (sy3042)
 Thomas Varghese (tpv2108)
 
-Heroku Link: https://enigmatic-mountain-39586-866bb6cfddd9.herokuapp.com/ (CHANGE TBD, DB IN WEIRD STATE)
+Heroku Link:
 
 **Instructions**
 
@@ -48,4 +48,3 @@ Things we plan to add for the demo:
 
 
 **Coverage Screenshots**
-TBD

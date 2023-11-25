@@ -5,7 +5,7 @@ Mauricio Gonzalez (mg4148)
 Stacey Yao (sy3042)
 Thomas Varghese (tpv2108)
 
-Heroku Link:
+Heroku Link: https://mighty-sierra-55632-34e80f480c4c.herokuapp.com/
 
 **Instructions**
 

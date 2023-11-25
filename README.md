@@ -47,5 +47,5 @@ Things we plan to add for the demo:
 4. Mock data to populate website
 
 
-**Coverage Screenshots**
+**Coverage Screenshots (RSpec and Cucumber Combined)**
 <img width="1280" alt="Screenshot 2023-11-24 at 6 30 15 PM" src="https://github.com/xx-thomas/GigPro/assets/113865951/cd4b0de2-adda-4e1a-a586-74a81b4ba08d">

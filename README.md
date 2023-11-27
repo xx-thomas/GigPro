@@ -41,7 +41,7 @@ Things we upgraded from iteration 1:
 
 Things we plan to add for the demo:
 
-1. Notifications by location/following other users
+1. Notifications by location/following other users (Thomas)
 2. Searching/filtering
 3. Final user interface
 4. Mock data to populate website

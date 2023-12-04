@@ -3,6 +3,10 @@ class GigsController < ApplicationController
 	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
     @gigs = Gig.all
+	if params[:search]
+		search_query = "%#{params[:search]}%"
+        @gigs = Gig.where('description LIKE :query OR title LIKE :query OR location LIKE :query', query: search_query)
+	end
   end
 
   def show

@@ -9,13 +9,18 @@
 		<%= text_field_tag :search, params[:search], placeholder: "Search gigs" %>
 		<%= submit_tag "Search" %>
 	  <% end %>
-	<ul>
+	<ul  class="list-group">
 		<% @gigs.each do |gig| %>
-			<li style="list-style-type: none;">
-				<%=t(:gig)%>: <%= link_to gig.title, gig %>, 
-				<%=t(:location)%>: <%= gig.location %>,
-				<%=t(:payment)%>: <%= gig.payment %>,
+			<li class="list-group-item">
+				<%=t(:gig)%>: <%= link_to gig.title, gig %>
+				<br>
+				<%=t(:location)%>: <%= gig.location %>
+				<br>
+				<%=t(:payment)%>: <%= gig.payment %>
+				<br>
+				<% if !gig.deadline.nil? %>
 				<%=t(:deadline)%>:  <%= gig.deadline %>
+				<% end %>
 			</li>
 		<% end %>
 	</ul>

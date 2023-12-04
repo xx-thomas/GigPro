@@ -3,4 +3,5 @@ class Gig < ApplicationRecord
 
 	validates :title, presence: true
 	validates :payment, presence: true
+	validates :location, presence: true
 end

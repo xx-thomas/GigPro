@@ -18,20 +18,30 @@ class GigsController < ApplicationController
   end
 
   def create
-    @gig = Gig.new(gig_params)
-		@gig.customer_id = current_user.id
-		
-		
-		if current_user.balance < @gig.payment || @gig.payment <= 0 || !@gig.save
-			if @gig.payment <= 0
-				flash.now[:danger] = "Payment needs to be positive"
-			end
-			if current_user.balance < @gig.payment
-				flash.now[:danger] = "You don't have enough balance!"
-			end
+   
+		@gig = Gig.new(gig_params)
+
+		if @gig.payment.nil? || @gig.title.nil? || @gig.location.nil?
+			flash.now[:danger] = "Please make sure Title, Location and Payment are provided!"
 			render :new, status: :unprocessable_entity
 		else
-			redirect_to @gig
+			#@gig = Gig.new(gig_params)
+			@gig.customer_id = current_user.id
+			
+			if current_user.balance < @gig.payment || @gig.payment <= 0 || @gig.deadline.past? || !@gig.save
+				if @gig.payment <= 0
+					flash.now[:danger] = "Payment needs to be positive"
+				end
+				if current_user.balance < @gig.payment
+					flash.now[:danger] = "You don't have enough balance!"
+				end
+				if @gig.deadline.past?
+					flash.now[:danger] = "Deadline is in the past! Please remove or update to the future"
+				end
+				render :new, status: :unprocessable_entity
+			else
+				redirect_to @gig
+			end
 		end
   end
 

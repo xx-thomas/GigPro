@@ -83,6 +83,11 @@ class GigsController < ApplicationController
 	def accept
 		@gig = Gig.find(params[:id])
 		Gig.update(@gig.id, :worker_id => current_user.id)
+		Notification.all.each do |notif|
+			if notif.gig_id == @gig.id
+				notif.destroy
+			end
+		end
 		redirect_to @gig
 	end
 
@@ -92,6 +97,11 @@ class GigsController < ApplicationController
 		gig_customer = User.find(@gig.customer_id)
 		User.update(@gig.worker_id, :balance => gig_worker.balance + @gig.payment, :worker_rating => gig_worker.worker_rating + 1)
 		User.update(@gig.customer_id, :balance => gig_customer.balance - @gig.payment)
+		Notification.all.each do |notif|
+			if notif.gig_id == @gig.id
+				notif.destroy
+			end
+		end
 		@gig.destroy
 		flash[:success] = "Gig: '#{@gig.title}' was completed!."
 		redirect_to action: "index"

@@ -1,0 +1,9 @@
+<div class="center jumbotron">
+<h1> Notifications </h1>
+<ul>
+<% @notifications.each do |notif| %>
+	<li style="list-style-type: none;">
+	<%= "A new " %><%= link_to "gig", gig_path(notif.gig_id) %><%= " has been created!" %>
+	</li>
+<% end %>
+</ul>

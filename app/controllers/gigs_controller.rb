@@ -3,10 +3,10 @@ class GigsController < ApplicationController
 	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
     @gigs = Gig.all
-	if params[:search]
-		search_query = "%#{params[:search]}%"
-        @gigs = Gig.where('description LIKE :query OR title LIKE :query OR location LIKE :query', query: search_query)
-	end
+		if params[:search]
+			search_query = "%#{params[:search]}%"
+					@gigs = Gig.where('description LIKE :query OR title LIKE :query OR location LIKE :query', query: search_query)
+		end
   end
 
   def show
@@ -44,6 +44,12 @@ class GigsController < ApplicationController
 				end
 				render :new, status: :unprocessable_entity
 			else
+				User.all.each do |user|
+					if user.id != current_user.id
+						notifcation = Notification.new(user_id: user.id, gig_id: @gig.id)
+						notifcation.save
+					end
+				end
 				redirect_to @gig
 			end
 		end

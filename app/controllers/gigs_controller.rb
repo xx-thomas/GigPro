@@ -57,7 +57,12 @@ class GigsController < ApplicationController
 
   def destroy
     @gig = Gig.find(params[:id])
-    @gig.destroy
+		Notification.all.each do |notif|
+			if notif.gig_id == @gig.id
+				notif.destroy
+			end
+		end
+		@gig.destroy
     redirect_to action: "index", status: :see_other
   end
 

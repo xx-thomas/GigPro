@@ -46,8 +46,8 @@ class GigsController < ApplicationController
 			else
 				User.all.each do |user|
 					if user.id != current_user.id
-						notifcation = Notification.new(user_id: user.id, gig_id: @gig.id)
-						notifcation.save
+						create_notifcation = Notification.new(user_id: user.id, gig_id: @gig.id, notification_type:"CREATE")
+						create_notifcation.save
 					end
 				end
 				redirect_to @gig
@@ -88,6 +88,8 @@ class GigsController < ApplicationController
 				notif.destroy
 			end
 		end
+		accept_notification = Notification.new(user_id: @gig.customer_id, gig_id: @gig.id, notification_type:"ACCEPT")
+		accept_notification.save
 		redirect_to @gig
 	end
 

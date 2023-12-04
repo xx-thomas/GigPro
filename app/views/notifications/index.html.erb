@@ -1,9 +1,9 @@
 <div class="center jumbotron">
-<h1> Notifications </h1>
+<h1> <%=t(:notifications)%> </h1>
 <ul class="list-group">
 <% @notifications.each do |notif| %>
 	<li style="list-style-type: none;" class="list-group-item list-group-item-warning" >
-	<%= "A new " %><%= link_to "gig", gig_path(notif.gig_id) %><%= " has been created!" %>
+	<%= t(:a_new)%> <%= link_to t(:gig), gig_path(notif.gig_id) %> <%= t(:has_been_created) %>
 	</li>
 <% end %>
 </ul>

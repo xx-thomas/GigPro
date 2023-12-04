@@ -1,7 +1,7 @@
 <div class="center jumbotron">
 <% if !logged_in? %>
-	<h1> Welcome to Gig Pro!</h1>
-	<p> Please login to use Gig Pro! </p>
+	<h1> <%=t(:welcome) %></h1>
+	<p> <%=t(:please_login) %></p>
 <% else %>
 	<% provide(:title, "Gigs") %>
 	<h1><%=t(:gigs) %></h1>

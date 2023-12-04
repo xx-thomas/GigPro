@@ -40,3 +40,8 @@ es:
   rating: "Clasificación"
   create_account_now: "Crear mi cuenta ahora!"
   new_user: "Nuevo usuário?"
+  welcome: "¡Bienvenido a GigPro!"
+  please_login: "Por favor, inicia sesión para usar GigPro."
+  notifications: "Notificaciones"
+  a_new: "Un nuevo"
+  has_been_created: "ha sido creado."

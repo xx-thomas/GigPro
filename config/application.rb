@@ -12,7 +12,7 @@ module Gigpro
     config.load_defaults 7.1
     
     # Permitted locales
-    I18n.available_locales = %i[en es]
+    I18n.available_locales = %i[en es ru]
 
     # Set default locale to en
     config.i18n.default_locale = :en

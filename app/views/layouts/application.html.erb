@@ -16,8 +16,9 @@
         <%= link_to "GigPro", root_path, id: "logo" %>
           <nav1>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to t(:gigs), root_path  %></li>
 							<% if logged_in? %>
+							<li><%= link_to t(:gigs), root_path  %></li>
+							<li><%= link_to t(:notifcations), notifications_path  %></li>
 							<li class="dropdown">
 								<a href="#" id="account" class="dropdown-toggle"> <%=t(:account) %><b class="caret"></b> </a>
 								<ul id="dropdown-menu" class="dropdown-menu">

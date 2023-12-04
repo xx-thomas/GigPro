@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 			post 'accept'
 		end
 	end
+	resources :notifications
 	resources :users
+	
 
   # Route for changing language
   get '/change_language', to: 'application#change_language', as: :change_language

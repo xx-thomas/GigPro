@@ -3,7 +3,11 @@
 <ul class="list-group">
 <% @notifications.each do |notif| %>
 	<li style="list-style-type: none;" class="list-group-item list-group-item-warning" >
+	<% if notif.notification_type == "CREATE" %>
 	<%= "A new " %><%= link_to "gig", gig_path(notif.gig_id) %><%= " has been created!" %>
+	<% else %>
+	<%= "Your " %><%= link_to "gig", gig_path(notif.gig_id) %><%= " has been accepted!" %>
+	<%end %>
 	</li>
 <% end %>
 </ul>

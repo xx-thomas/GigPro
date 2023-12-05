@@ -6,7 +6,7 @@
 	<% if notif.notification_type == "CREATE" %>
 	<%= t(:a_new)%> <%= link_to t(:gig), gig_path(notif.gig_id) %> <%= t(:has_been_created) %>
 	<% else %>
-	<%= t(:your) %><%= link_to t(:gig), gig_path(notif.gig_id) %><%= t(:has_been_accepted) %>
+	<%= t(:your)%> <%= link_to t(:gig), gig_path(notif.gig_id) %> <%=t(:has_been_accepted) %>
 	<%end %>
 	</li>
 <% end %>

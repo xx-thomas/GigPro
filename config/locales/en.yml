@@ -59,6 +59,7 @@ en:
   edit: "Edit"
   complete: "Complete"
   delete: "Delete"
+  accept: "Accept"
   create_my_account: "Create my account"
   password_confirmation: "Password confirmation"
   email: "Email"
@@ -76,4 +77,5 @@ en:
   your: "Your"
   has_been_accepted: "has been accepted!"
   search_gigs: "Search gigs"
+  search: "Search"
   

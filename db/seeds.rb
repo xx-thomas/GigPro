@@ -8,9 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-ActiveRecord::Base.connection.execute "DELETE FROM `notifications`"
-ActiveRecord::Base.connection.execute "DELETE FROM `gigs`"
-ActiveRecord::Base.connection.execute "DELETE FROM `users`"
+ActiveRecord::Base.connection.execute "DELETE FROM notifications"
+ActiveRecord::Base.connection.execute "DELETE FROM gigs"
+ActiveRecord::Base.connection.execute "DELETE FROM users"
 
 all_users = ["Lidia", "Stacey", "Thomas", "Mauricio", "Jimmy", "Justin", "Mike", "Antonio", "Nalini", "Claudia"]
 mapped_users = []

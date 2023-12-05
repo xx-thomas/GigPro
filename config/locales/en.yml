@@ -64,6 +64,7 @@ en:
   email: "Email"
   new_worker: "New worker"
   workers: "Workers"
+  worker: "Worker"
   rating: "Rating"
   create_account_now: "Create account now!"
   new_user: "New user?"
@@ -74,4 +75,5 @@ en:
   has_been_created: "has been created!"
   your: "Your"
   has_been_accepted: "has been accepted!"
+  search_gigs: "Search gigs"
   

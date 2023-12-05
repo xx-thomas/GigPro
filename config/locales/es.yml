@@ -37,6 +37,7 @@ es:
   email: "Correo electrónico"
   new_worker: "Nuevo trabajador"
   workers: "Trabajadores"
+  worker: "Trabajador"
   rating: "Clasificación"
   create_account_now: "Crear mi cuenta ahora!"
   new_user: "Nuevo usuário?"
@@ -47,3 +48,4 @@ es:
   has_been_created: "ha sido creado."
   your: "Tu"
   has_been_accepted: "ha sido aceptado."
+  search_gigs: "Buscar trabajo"

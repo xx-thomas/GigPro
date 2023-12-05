@@ -6,7 +6,7 @@
 	<% provide(:title, "Gigs") %>
 	<h1><%=t(:gigs) %></h1>
 	<%= form_tag('/gigs', method: :get) do %>
-		<%= text_field_tag :search, params[:search], placeholder: "Search gigs" %>
+		<%= text_field_tag :search, params[:search], placeholder: t(:search_gigs) %>
 		<%= submit_tag "Search" %>
 	  <% end %>
 	<ul  class="list-group">

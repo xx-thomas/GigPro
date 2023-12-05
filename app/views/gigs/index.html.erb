@@ -7,7 +7,7 @@
 	<h1><%=t(:gigs) %></h1>
 	<%= form_tag('/gigs', method: :get) do %>
 		<%= text_field_tag :search, params[:search], placeholder: t(:search_gigs) %>
-		<%= submit_tag "Search" %>
+		<%= submit_tag t(:search) %>
 	  <% end %>
 	<ul  class="list-group">
 		<% @gigs.each do |gig| %>

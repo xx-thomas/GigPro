@@ -3,7 +3,9 @@
 <h1><%=t(:description)%>: <%=  @gig.description %></h1>
 <h1><%=t(:location)%>: <%=  @gig.location %></h1>
 <h1><%=t(:payment)%>: <%=  @gig.payment %></h1>
+<% if !@gig.deadline.nil? %>
 <h1><%=t(:deadline)%>: <%=  @gig.deadline %></h1>
+<%end %>
 <h1><%=t(:customer)%>: <%=  @customer.name %></h1>
 <% if !@worker.nil? %>
 <h1><%=t(:worker)%>: <%=  @worker.name  %></h1>

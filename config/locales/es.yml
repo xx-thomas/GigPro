@@ -32,6 +32,7 @@ es:
   edit: "Editar"
   complete: "Completar"
   delete: "Deletar"
+  accept: "Aceptar"
   create_my_account: "Crear mi cuenta"
   password_confirmation: "Confirmación de contraseña"
   email: "Correo electrónico"
@@ -49,3 +50,4 @@ es:
   your: "Tu"
   has_been_accepted: "ha sido aceptado."
   search_gigs: "Buscar trabajo"
+  search: "Buscar"

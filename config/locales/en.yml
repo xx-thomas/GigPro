@@ -67,4 +67,11 @@ en:
   rating: "Rating"
   create_account_now: "Create account now!"
   new_user: "New user?"
+  welcome: "Welcome to GigPro!"
+  please_login: "Please login to use GigPro."
+  notifications: "Notifications"
+  a_new: "A new"
+  has_been_created: "has been created!"
+  your: "Your"
+  has_been_accepted: "has been accepted!"
   

@@ -36,6 +36,7 @@ ru:
   email: "Электронная почта"
   new_worker: "Новый работник"
   workers: "Работники"
+  worker: "Рабочий"
   rating: "Рейтинг"
   create_account_now: "Создать аккаунт сейчас!"
   new_user: "Новый пользователь?"
@@ -46,3 +47,4 @@ ru:
   has_been_created: "был создан!"
   your: "Ваш"
   has_been_accepted: "был принят."
+  search_gigs: "поиск работы"

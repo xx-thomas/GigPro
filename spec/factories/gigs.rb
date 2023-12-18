@@ -4,6 +4,7 @@ FactoryBot.define do
   factory :gig do
     title { Faker::Lorem.sentence }
     payment { Faker::Number.decimal(l_digits: 2) }
+		location { Faker::Lorem.sentence }
     association :customer, factory: :user
   end
   

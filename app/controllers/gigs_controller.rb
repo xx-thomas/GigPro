@@ -3,7 +3,7 @@ class GigsController < ApplicationController
 	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
 		Gig.all.each do |g|
-			if !g.deadline.nil? && g.deadline.past?
+			if !g.deadline.nil? && g.deadline.past? && g.worker_id.nil?
 				Notification.all.each do |n|
 					if n.gig_id == g.id
 						n.destroy

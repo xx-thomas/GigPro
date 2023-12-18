@@ -16,8 +16,6 @@ Rails version: 7.1.1
 0. bundle install
 1. bin/rails db:migrate
 2. bin/rails server
-
-(For Testing)
 3. bundle exec cucumber
 4. bundle exec rspec
 

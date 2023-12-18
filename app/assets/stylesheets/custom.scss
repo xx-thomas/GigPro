@@ -25,6 +25,14 @@ body {
 	
 }
 
+.navbar .navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #50baf7;
+}
+
 .navbar-inverse{
 	background-color: #000000;
 }

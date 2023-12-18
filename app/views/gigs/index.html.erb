@@ -3,7 +3,7 @@
 	<h1> <%=t(:welcome) %></h1>
 	<h2> <%=t(:please_login) %></h2>
 <% else %>
-	<% provide(:title, "Gigs") %>
+	<% provide(:title, t(:gigs)) %>
 	<h1><%=t(:gigs) %></h1>
 	<%= form_tag('/gigs', method: :get) do %>
 		<%= text_field_tag :search, params[:search], placeholder: t(:search_gigs) %>

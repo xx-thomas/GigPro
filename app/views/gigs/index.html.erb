@@ -1,7 +1,7 @@
 <div class="jumbotron">
 <% if !logged_in? %>
 	<h1> <%=t(:welcome) %></h1>
-	<p> <%=t(:please_login) %></p>
+	<h2> <%=t(:please_login) %></h2>
 <% else %>
 	<% provide(:title, "Gigs") %>
 	<h1><%=t(:gigs) %></h1>

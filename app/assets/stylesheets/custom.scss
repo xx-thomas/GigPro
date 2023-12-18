@@ -15,12 +15,26 @@
 }
 
 #logo:hover {
-  color: #fff;
+  color: #50baf7;
   text-decoration: none;
 }
 
 body {
   padding-top: 60px;
+	background-color: #000000;
+	
+}
+
+.navbar-inverse{
+	background-color: #000000;
+}
+.container {
+	background-color: #000000;
+	
+}
+
+.jumbotron{
+	background-color: #ffffff;
 }
 
 section {
@@ -58,7 +72,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #000000;
 }
 
 p {

@@ -8,10 +8,10 @@ Background: workers and customers have been added to the database
   | Customer               | customer@mail.com |customerpass| 0             |  1000     |
 	| Worker                 | worker@mail.com    |workerpass  | 0             |  0        |
 
-  And  I am on the gigs page
+  And  I am on the home page
   Then 2 seed users should exist
 Scenario: create gig
-	When I follow "New Gig"
+	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
 	And I press "Log in"
@@ -29,7 +29,7 @@ Scenario: create gig
 
 
 Scenario: attempt to create gig without balance
-	When I follow "New Gig"
+	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
 	And I press "Log in"
@@ -43,7 +43,7 @@ Scenario: attempt to create gig without balance
 	Then I should see "You don't have enough balance!"
 
 Scenario: attempt to create gig with negative payment
-	When I follow "New Gig"
+	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
 	And I press "Log in"
@@ -57,7 +57,7 @@ Scenario: attempt to create gig with negative payment
 	Then I should see "Payment needs to be positive"
 
 Scenario: attempt to create gig without payment
-	When I follow "New Gig"
+	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
 	And I press "Log in"
@@ -71,7 +71,7 @@ Scenario: attempt to create gig without payment
 	Then I should see "Payment needs to be positive"
 
 Scenario: Allow Edit and Delete after gig creation
-	When I follow "New Gig"
+	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
 	And I press "Log in"

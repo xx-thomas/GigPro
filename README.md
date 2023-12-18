@@ -24,11 +24,13 @@ Rails version: 7.1.1
 
 **How to use GigPro**
 
-Sign up and create a gig. You will be initially given a balance of 1000 to create gigs with.
-After a gig is created, you can log out and create a different user and accept the gig.
-The first user/creator is meant to be the "customer" and the second user/acceptor is meant to be
-the "worker". Once the the gig is accepted, log back into the first user and hit complete gig.
-The payment for the gig will be transfered to the worker and their rating will go up. You can check this in the drop down My Account and then click Profile. Also you can change language at any time during the above process by clicking english or espanol in the nav bar.
+GigPro is best experienced from the perspective multiple users, so create at least three accounts to see all features. One should be a “customer” and the other two should be “workers”. Note customers and workers are not roles in GigPro, customers and workers are just regular users (e.g. any user can create and accept gigs) , it’s just to understand GigPro.
+
+
+On the customer account, create a gig. Use one of the existing seed gigs as inspiration if form inputs are unclear. Log out and log into both worker accounts. They should both have received notifications. With one of workers, click the notification link and hit accept on the gig. Now this worker has been assigned to the gig. Sign back into the customer account and check notifications. There should be a “your gig has been accepted notification”. Click the notification again to go to the gig (or visit the general gigs page) and this time hit complete. Now the customer has agreed that the worker has completed the job and the workers balance will be increased by the payment and his rating will go up.
+
+
+The above instructions constitute the basic workflow. Others features include being able change languages by clicking one of the languages in the nav bar and a universal search bar.
 
 
 

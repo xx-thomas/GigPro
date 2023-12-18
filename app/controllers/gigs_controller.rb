@@ -145,6 +145,7 @@ class GigsController < ApplicationController
 		@gig = Gig.find(params[:id])
 		gig_worker = User.find(@gig.worker_id)
 		gig_customer = User.find(@gig.customer_id)
+		# TODO Check that balance is not negative before doing this and if so, show error message to user
 		User.update(@gig.worker_id, :balance => gig_worker.balance + @gig.payment, :worker_rating => gig_worker.worker_rating + 1)
 		User.update(@gig.customer_id, :balance => gig_customer.balance - @gig.payment)
 		Notification.all.each do |notif|

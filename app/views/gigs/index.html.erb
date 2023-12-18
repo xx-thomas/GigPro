@@ -1,4 +1,4 @@
-<div class="center jumbotron">
+<div class="jumbotron">
 <% if !logged_in? %>
 	<h1> <%=t(:welcome) %></h1>
 	<p> <%=t(:please_login) %></p>
@@ -9,21 +9,30 @@
 		<%= text_field_tag :search, params[:search], placeholder: t(:search_gigs) %>
 		<%= submit_tag t(:search) %>
 	  <% end %>
-	<ul  class="list-group">
-		<% @gigs.each do |gig| %>
-			<li class="list-group-item">
-				<%=t(:gig)%>: <%= link_to gig.title, gig %>
-				<br>
-				<%=t(:location)%>: <%= gig.location %>
-				<br>
-				<%=t(:payment)%>: <%= gig.payment %>
-				<br>
-				<% if !gig.deadline.nil? %>
-				<%=t(:deadline)%>:  <%= gig.deadline %>
-				<% end %>
-			</li>
-		<% end %>
-	</ul>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col"><%=t(:gig)%></th>
+				<th scope="col"><%=t(:location)%></th>
+				<th scope="col"><%=t(:payment)%></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @gigs.each do |g| %>
+				<tr>
+					<td>
+						<%= link_to g.title, g %>
+					</td>
+					<td>
+						<%= g.location %>
+					</td>
+					<td>
+						<%= g.payment %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
 	<p></p>
 	<%= link_to t(:new_gig), new_gig_path, class: "btn btn-primary btn-lg" %>
 	</div>

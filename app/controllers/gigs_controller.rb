@@ -2,7 +2,17 @@ class GigsController < ApplicationController
 	before_action :logged_in_user, only:[:new, :edit, :destroy, :complete, :accept]
 	before_action :correct_user, only:[:edit, :destroy, :complete]
   def index
-    @gigs = Gig.all
+		Gig.all.each do |g|
+			if !g.deadline.nil? && g.deadline.past?
+				Notification.all.each do |n|
+					if n.gig_id == g.id
+						n.destroy
+					end
+				end
+				g.destroy
+			end
+		end
+		@gigs = Gig.all
 		if params[:search]
 			search_query = "%#{params[:search]}%"
 					@gigs = Gig.where('description LIKE :query OR title LIKE :query OR location LIKE :query', query: search_query)

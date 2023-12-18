@@ -83,9 +83,47 @@ class GigsController < ApplicationController
   def update
     @gig = Gig.find(params[:id])
 
-    if @gig.update(gig_params)
+		new_deadline = gig_params[:deadline]
+		new_payment = gig_params[:payment]
+
+		valid = true
+		invalid_date = false
+		if !new_deadline.nil?
+			datetime_object = DateTime.parse(new_deadline)
+			if datetime_object.past?
+				valid = false
+				invalid_date = true
+			end
+		end
+
+		invalid_payment_balance = false
+		invalid_payment_negative = false
+		if !new_payment.nil?
+			new_payment_value = new_payment.to_i
+			if new_payment_value <= 0
+				invalid_payment_negative = true
+				valid = false
+			end
+			if current_user.balance < new_payment_value
+				invalid_payment_balance = true
+				valid = false
+			end
+		end
+
+		
+
+    if valid && @gig.update(gig_params)
       redirect_to @gig
     else
+			if invalid_date
+				flash.now[:danger] = "Deadline is in the past! Please remove or update to the future"
+			end
+			if invalid_payment_balance
+				flash.now[:danger] = "You don't have enough balance!"
+			end
+			if invalid_payment_negative
+				flash.now[:danger] = "Payment needs to be positive"
+			end
       render :edit, status: :unprocessable_entity
     end
   end

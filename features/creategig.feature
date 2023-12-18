@@ -28,7 +28,7 @@ Scenario: create gig
 	And I should see "Payment: 10"
 
 
-Scenario: attempt to create gig without balance
+Scenario: attempt to create gig without enough balance
 	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"
@@ -70,6 +70,21 @@ Scenario: attempt to create gig without payment
 	And I press "Create gig"
 	Then I should see "Payment needs to be positive"
 
+Scenario: attempt to create gig with past deadline
+	When I follow "Log in"
+	And I fill in "session_email" with "customer@mail.com"
+	And I fill in "session_password" with "customerpass"
+	And I press "Log in"
+	And I follow "Gigs"
+	And I follow "New Gig"
+	And I fill in "gig_title" with "TestTitle"
+	And I fill in "gig_description" with "TestDescription"
+	And I fill in "gig_location" with "TestLocation"
+	And I fill in "gig_payment" with "10"
+	And I fill in "gig_deadline" with "2000-12-04T11:01"
+	And I press "Create gig"
+	Then I should see "Deadline is in the past! Please remove or update to the future"
+
 Scenario: Allow Edit and Delete after gig creation
 	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
@@ -88,3 +103,16 @@ Scenario: Allow Edit and Delete after gig creation
 	And I should see "Payment: 10"
 	And I should see "Edit"
 	And I should see "Delete"
+
+Scenario: attempt to create gig without filling out required field
+	When I follow "Log in"
+	And I fill in "session_email" with "customer@mail.com"
+	And I fill in "session_password" with "customerpass"
+	And I press "Log in"
+	And I follow "Gigs"
+	And I follow "New Gig"
+	And I fill in "gig_title" with "TestTitle"
+	And I fill in "gig_description" with "TestDescription"
+	And I fill in "gig_location" with "TestLocation"
+	And I press "Create gig"
+	Then I should see "Please make sure Title, Location and Payment are provided!"

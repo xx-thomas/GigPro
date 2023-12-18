@@ -51,3 +51,18 @@ end
 Then /(.*) seed gigs should exist/ do | n_seeds |
   expect(Gig.count).to eq n_seeds.to_i
 end
+
+Given /the following notifications exist/ do |notifications_table|
+  notifications_table.hashes.each do |notification|
+    Notification.create!(notification)
+  end
+end
+
+Then /(.*) seed notifications should exist/ do | n_seeds |
+  expect(Notification.count).to eq n_seeds.to_i
+end
+
+
+Then('1	seed notification should exist') do
+  expect(Notification.count).to eq 1
+end

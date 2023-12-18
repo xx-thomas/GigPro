@@ -1,14 +1,15 @@
-<div class="center jumbotron">
-<h1><%=t(:gig)%>: <%=@gig.title %></h1>
-<h1><%=t(:description)%>: <%=  @gig.description %></h1>
-<h1><%=t(:location)%>: <%=  @gig.location %></h1>
-<h1><%=t(:payment)%>: <%=  @gig.payment %></h1>
+<div class="jumbotron">
+<% provide(:title, t(:gig)) %>
+<p><%=t(:gig)%>: <%=@gig.title %></p>
+<p><%=t(:description)%>: <%=  @gig.description %></p>
+<p><%=t(:location)%>: <%=  @gig.location %></p>
+<p><%=t(:payment)%>: <%=  @gig.payment %></p>
 <% if !@gig.deadline.nil? %>
-<h1><%=t(:deadline)%>: <%=  @gig.deadline %></h1>
+<p><%=t(:deadline)%>: <%=  @gig.deadline %></p>
 <%end %>
-<h1><%=t(:customer)%>: <%=  @customer.name %></h1>
+<p><%=t(:customer)%>: <%=  @customer.name %></p>
 <% if !@worker.nil? %>
-<h1><%=t(:worker)%>: <%=  @worker.name  %></h1>
+<p><%=t(:worker)%>: <%=  @worker.name  %></p>
 <%end %>
 
 
@@ -17,10 +18,10 @@
 <%= link_to t(:edit), edit_gig_path(@gig), class: "btn btn-primary btn-lg" %>
 <%= link_to t(:delete), gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :delete} %>
 <% else %>
-<%= link_to t(:accept),  accept_gig_path(@gig), class: "btn btn-warning btn-lg", data: { turbo_method: :post } %>
+<%= link_to t(:accept),  accept_gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :post } %>
 <%end %>
 <% else %>
 <% if current_user == @customer %> 
-<%= link_to t(:complete), complete_gig_path(@gig), class: "btn btn-success btn-lg", data: { turbo_method: :post } %>
+<%= link_to t(:complete), complete_gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :post } %>
 <%end %>
 <%end %>

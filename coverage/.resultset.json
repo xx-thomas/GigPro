@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/channels/application_cable/channel.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/channel.rb": {
         "lines": [
           1,
           1,
@@ -9,7 +9,7 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/channels/application_cable/connection.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/connection.rb": {
         "lines": [
           1,
           1,
@@ -17,14 +17,14 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/controllers/application_controller.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
           1,
           null,
           1,
-          22,
+          21,
           null,
           null,
           1,
@@ -34,13 +34,27 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/controllers/gigs_controller.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/gigs_controller.rb": {
         "lines": [
           1,
           1,
           1,
           1,
-          8,
+          7,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          7,
+          7,
+          0,
+          0,
+          null,
           null,
           null,
           1,
@@ -56,17 +70,96 @@
           null,
           null,
           1,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
           0,
           0,
           null,
           null,
           0,
           0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
           0,
           null,
           0,
           0,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
           0,
           null,
           0,
@@ -77,23 +170,11 @@
           0,
           0,
           0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
           0,
           0,
           null,
+          null,
           0,
-          null,
-          null,
-          null,
-          1,
           0,
           0,
           null,
@@ -104,6 +185,11 @@
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          null,
+          null,
           0,
           0,
           0,
@@ -121,6 +207,7 @@
           0,
           0,
           0,
+          0,
           null,
           null,
           null,
@@ -132,7 +219,7 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/controllers/sessions_controller.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           1,
@@ -157,7 +244,7 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/controllers/users_controller.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -190,7 +277,7 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/jobs/application_job.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/jobs/application_job.rb": {
         "lines": [
           1,
           null,
@@ -201,7 +288,7 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/mailers/application_mailer.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/mailers/application_mailer.rb": {
         "lines": [
           1,
           1,
@@ -209,14 +296,14 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/models/application_record.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/models/user.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/user.rb": {
         "lines": [
           1,
           10,
@@ -228,17 +315,29 @@
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/models/gig.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/gig.rb": {
         "lines": [
           1,
           1,
           null,
+          1,
           1,
           1,
           null
         ]
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/helpers/application_helper.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/notifications_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -246,7 +345,7 @@
         "branches": {
         }
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/helpers/gigs_helper.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/gigs_helper.rb": {
         "lines": [
           0,
           0
@@ -254,7 +353,15 @@
         "branches": {
         }
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/helpers/sessions_helper.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/notifications_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/sessions_helper.rb": {
         "lines": [
           0,
           0,
@@ -284,8 +391,18 @@
         "branches": {
         }
       },
-      "C:/Users/asanc/OneDrive/Desktop/test/GigPro/app/helpers/users_helper.rb": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/users_helper.rb": {
         "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/notification.rb": {
+        "lines": [
+          0,
+          0,
           0,
           0
         ],
@@ -293,6 +410,413 @@
         }
       }
     },
-    "timestamp": 1700201116
+    "timestamp": 1702917696
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/user.rb": {
+        "lines": [
+          1,
+          50,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/gigs_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          55,
+          83,
+          2,
+          6,
+          4,
+          null,
+          null,
+          2,
+          null,
+          null,
+          55,
+          55,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          19,
+          19,
+          19,
+          5,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          null,
+          10,
+          null,
+          10,
+          1,
+          1,
+          null,
+          null,
+          9,
+          null,
+          9,
+          4,
+          2,
+          null,
+          4,
+          1,
+          null,
+          4,
+          1,
+          null,
+          4,
+          null,
+          5,
+          13,
+          8,
+          8,
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          2,
+          2,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          1,
+          4,
+          null,
+          4,
+          4,
+          null,
+          4,
+          4,
+          4,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          1,
+          null,
+          4,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          4,
+          1,
+          null,
+          3,
+          1,
+          null,
+          3,
+          1,
+          null,
+          3,
+          1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          20,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          8,
+          8,
+          8,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          19,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          207,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/gigs_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/notifications_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/sessions_helper.rb": {
+        "lines": [
+          1,
+          1,
+          28,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null,
+          1,
+          412,
+          328,
+          null,
+          null,
+          null,
+          1,
+          234,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/gig.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          28,
+          28,
+          28,
+          28,
+          28,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          28,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/models/notification.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/notifications_controller.rb": {
+        "lines": [
+          1,
+          1,
+          7,
+          null,
+          null
+        ]
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/thomas/Columbia/SAAS/GigPro/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1702917673
   }
 }

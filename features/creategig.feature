@@ -28,7 +28,7 @@ Scenario: create gig
 	And I should see "Payment: 10"
 
 
-Scenario: attempt to create gig without balance
+Scenario: attempt to create gig without enough balance
 	When I follow "Log in"
 	And I fill in "session_email" with "customer@mail.com"
 	And I fill in "session_password" with "customerpass"

@@ -1,6 +1,6 @@
 Feature: Test expiration of gigs in gigpro
 
-Background: workers and customers have been added to the database along notifications that should be deleted
+Background: workers and customers have been added to the database along notifications that should be deleted for expired gigs
 
   Given the following users exist:
   | name                   | email             | password   | worker_rating |  balance |

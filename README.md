@@ -29,3 +29,10 @@ After a gig is created, you can log out and create a different user and accept t
 The first user/creator is meant to be the "customer" and the second user/acceptor is meant to be
 the "worker". Once the the gig is accepted, log back into the first user and hit complete gig.
 The payment for the gig will be transfered to the worker and their rating will go up. You can check this in the drop down My Account and then click Profile. Also you can change language at any time during the above process by clicking english or espanol in the nav bar.
+
+
+
+**Coverage (Cucumber + RSpec Combined)**
+
+![Screenshot 2023-12-18 at 11 42 04 AM](https://github.com/xx-thomas/GigPro/assets/113865951/e69774a9-8863-4aeb-92bc-48c810f228b4)
+

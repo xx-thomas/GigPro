@@ -88,7 +88,7 @@ class GigsController < ApplicationController
 
 		valid = true
 		invalid_date = false
-		if !new_deadline.nil?
+		if !new_deadline.empty?
 			datetime_object = DateTime.parse(new_deadline)
 			if datetime_object.past?
 				valid = false

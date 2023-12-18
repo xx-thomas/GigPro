@@ -18,10 +18,10 @@
 <%= link_to t(:edit), edit_gig_path(@gig), class: "btn btn-primary btn-lg" %>
 <%= link_to t(:delete), gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :delete} %>
 <% else %>
-<%= link_to t(:accept),  accept_gig_path(@gig), class: "btn btn-warning btn-lg", data: { turbo_method: :post } %>
+<%= link_to t(:accept),  accept_gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :post } %>
 <%end %>
 <% else %>
 <% if current_user == @customer %> 
-<%= link_to t(:complete), complete_gig_path(@gig), class: "btn btn-success btn-lg", data: { turbo_method: :post } %>
+<%= link_to t(:complete), complete_gig_path(@gig), class: "btn btn-primary btn-lg", data: { turbo_method: :post } %>
 <%end %>
 <%end %>

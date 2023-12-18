@@ -39,7 +39,7 @@ class GigsController < ApplicationController
 				if current_user.balance < @gig.payment
 					flash.now[:danger] = "You don't have enough balance!"
 				end
-				if @gig.deadline.past?
+				if !@gig.deadline.nil? && @gig.deadline.past?
 					flash.now[:danger] = "Deadline is in the past! Please remove or update to the future"
 				end
 				render :new, status: :unprocessable_entity

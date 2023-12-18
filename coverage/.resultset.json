@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/channel.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/channels/application_cable/channel.rb": {
         "lines": [
           1,
           1,
@@ -9,7 +9,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/connection.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/channels/application_cable/connection.rb": {
         "lines": [
           1,
           1,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/application_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -34,7 +34,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/gigs_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/gigs_controller.rb": {
         "lines": [
           1,
           1,
@@ -219,7 +219,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/sessions_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           1,
@@ -244,7 +244,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/users_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -277,7 +277,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/jobs/application_job.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/jobs/application_job.rb": {
         "lines": [
           1,
           null,
@@ -288,7 +288,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/mailers/application_mailer.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/mailers/application_mailer.rb": {
         "lines": [
           1,
           1,
@@ -296,14 +296,14 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/application_record.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/user.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/user.rb": {
         "lines": [
           1,
           10,
@@ -315,7 +315,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/gig.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/gig.rb": {
         "lines": [
           1,
           1,
@@ -326,7 +326,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/notifications_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/notifications_controller.rb": {
         "lines": [
           0,
           0,
@@ -337,7 +337,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/application_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/ratings_controller.rb": {
         "lines": [
           0,
           0
@@ -345,7 +345,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/gigs_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/application_helper.rb": {
         "lines": [
           0,
           0
@@ -353,7 +353,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/notifications_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/gigs_helper.rb": {
         "lines": [
           0,
           0
@@ -361,7 +361,23 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/sessions_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/notifications_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/ratings_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/sessions_helper.rb": {
         "lines": [
           0,
           0,
@@ -391,7 +407,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/users_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/users_helper.rb": {
         "lines": [
           0,
           0
@@ -399,7 +415,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/notification.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/notification.rb": {
         "lines": [
           0,
           0,
@@ -410,11 +426,11 @@
         }
       }
     },
-    "timestamp": 1702917696
+    "timestamp": 1702922650
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/user.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/user.rb": {
         "lines": [
           1,
           50,
@@ -426,14 +442,14 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/application_record.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/gigs_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/gigs_controller.rb": {
         "lines": [
           1,
           1,
@@ -618,7 +634,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/application_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -635,25 +651,31 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/application_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/gigs_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/gigs_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/notifications_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/notifications_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/sessions_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/ratings_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/sessions_helper.rb": {
         "lines": [
           1,
           1,
@@ -681,13 +703,13 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/helpers/users_helper.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/helpers/users_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/gig.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/gig.rb": {
         "lines": [
           1,
           1,
@@ -698,7 +720,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/sessions_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           1,
@@ -723,7 +745,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/users_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -756,7 +778,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/models/notification.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/models/notification.rb": {
         "lines": [
           1,
           1,
@@ -764,7 +786,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/controllers/notifications_controller.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/notifications_controller.rb": {
         "lines": [
           1,
           1,
@@ -773,7 +795,7 @@
           null
         ]
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/channel.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -783,7 +805,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/channels/application_cable/connection.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -793,7 +815,15 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/jobs/application_job.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/controllers/ratings_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/staceyyao/RubymineProjects/GigPro/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -806,7 +836,7 @@
         "branches": {
         }
       },
-      "/Users/thomas/Columbia/SAAS/GigPro/app/mailers/application_mailer.rb": {
+      "/Users/staceyyao/RubymineProjects/GigPro/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -817,6 +847,6 @@
         }
       }
     },
-    "timestamp": 1702917673
+    "timestamp": 1702922644
   }
 }

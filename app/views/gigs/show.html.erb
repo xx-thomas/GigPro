@@ -7,9 +7,9 @@
 <% if !@gig.deadline.nil? %>
 <p><%=t(:deadline)%>: <%=  @gig.deadline %></p>
 <%end %>
-<p><%=t(:customer)%>: <%=  @customer.name %></p>
+<p><%=t(:customer)%>:<a href="/users/<%=@customer.id %>>"> <%=  @customer.name %></a></p>
 <% if !@worker.nil? %>
-<p><%=t(:worker)%>: <%=  @worker.name  %></p>
+<p><%=t(:worker)%>: <a href="/users/<%=@worker.id %>>"> <%=@worker.name %></a></p>
 <%end %>
 
 

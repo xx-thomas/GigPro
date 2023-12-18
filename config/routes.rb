@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 	end
 	resources :notifications
 	resources :users
-	
+
+  get '/ratings', to: 'ratings#index'
 
   # Route for changing language
   get '/change_language', to: 'application#change_language', as: :change_language

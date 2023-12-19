@@ -1,9 +1,25 @@
 <% provide(:title, t(:profile)) %>
 <div class="center jumbotron">
-<h1><%=t(:profile)%> </h1>
-<p><%=t(:name)%>: <%= @user.name %></p>
-<p><%=t(:email)%>: <%= @user.email %></p>
-<p><%=t(:rating)%>: <%= @user.worker_rating %></p>
-<p><%=t(:balance)%>: <%= @user.balance %></p>
+  <h1><%=t(:profile)%> </h1>
+  <p><%=t(:name)%>: <%= @user.name %></p>
+  <p><%=t(:email)%>: <%= @user.email %></p>
+  <p><%=t(:rating)%>: <%= @user.worker_rating %></p>
+  <p><%=t(:balance)%>: <%= @user.balance %></p>
+
+  <br>
+
+  <%= link_to "Write a review for #{@user.name}",
+              new_rating_path(user: @user.id) %>
+
+  <p><b>Ratings for <%=@user.name %> :</b></p>
+
+  <% @received_ratings.all.each do |rating| %>
+    <div>
+      <p>Rating: <%= rating.rating_value %></p>
+      <p>Content: <%= rating.content %></p>
+    </div>
+    <hr>
+  <% end %>
+
 
 </div>

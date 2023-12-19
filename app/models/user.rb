@@ -5,4 +5,5 @@ class User < ApplicationRecord
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: true
   has_secure_password
+  has_many :received_ratings, class_name: 'Rating', foreign_key: 'recipient_id'
 end

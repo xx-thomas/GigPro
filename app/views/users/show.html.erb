@@ -9,16 +9,17 @@
   <br>
 
   <%= link_to "Write a review for #{@user.name}",
-              new_rating_path(recipient_id: @user.id) %>
+              new_rating_path(user: @user.id) %>
 
   <p><b>Ratings for <%=@user.name %> :</b></p>
 
-  <% @received_ratings.each do |rating| %>
+  <% @received_ratings.all.each do |rating| %>
     <div>
-      <p>Rating: <%= rating.rating %></p>
+      <p>Rating: <%= rating.rating_value %></p>
       <p>Content: <%= rating.content %></p>
     </div>
     <hr>
   <% end %>
+
 
 </div>

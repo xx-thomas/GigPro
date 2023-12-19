@@ -14,11 +14,16 @@ Rails.application.routes.draw do
 	end
 	resources :notifications
 	resources :users
-	resources :ratings
+	resources :ratings do
+    member do
+      post 'create'
+		end
+	end
 
 
-  #get '/ratings', to: 'ratings#index'
-  #get '/ratings/new', to: 'ratings#new'
+  get '/ratings', to: 'ratings#index'
+  get '/ratings/new', to: 'ratings#new'
+  #post "/ratings/new", to:"ratings#create"
 
 
 

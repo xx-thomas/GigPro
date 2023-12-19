@@ -17,8 +17,9 @@ Rails.application.routes.draw do
 	resources :ratings
 
 
-  get '/ratings', to: 'ratings#index'
-  get '/ratings/new', to: 'ratings#new'
+  #get '/ratings', to: 'ratings#index'
+  #get '/ratings/new', to: 'ratings#new'
+
 
 
   # Route for changing language

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
 		@user = User.find(params[:id])
+    @received_ratings = current_user.received_ratings
 	end
 
 	def new

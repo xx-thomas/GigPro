@@ -1,6 +1,7 @@
 class RatingsController < ApplicationController
   def new
-    @review = Rating.new
+    @rating = Rating.new
+    #@rating.recipient_id = params[:recipient_id] if params[:recipient_id]
   end
 
   def index
@@ -9,22 +10,23 @@ class RatingsController < ApplicationController
 
 
   def create
-    @recipient_user = User.find(params[:recipient_id])
-    #@review = Rating.new(ratings_params)
-    @review = current_user.received_ratings.build(review_params)
+    #@rating = current_user.received_ratings.build(rating_params)
+    @rating = Rating.new(rating_params)
 
-    if @review.save
-      flash[:success] = "Review complete!."
+    if @rating.save
+      flash[:success] = "Success!"
+      redirect_to 'index'
     else
-      flash[:danger] = "Error creating review."
+      flash.now[:danger] = "Error creating review"
+      render :new
     end
+
   end
 
 
   private
-  def ratings_params
-    #differentiate worker and customer somehow? for recipient.
-    params.require(:ratings).permit(:content, :recipient_id)
+  def rating_params
+    params.require(:rating).permit(:content, :rating_value)
   end
 
 end

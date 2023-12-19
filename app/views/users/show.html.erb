@@ -7,5 +7,17 @@
   <p><%=t(:balance)%>: <%= @user.balance %></p>
 
   <br>
-  <a href="/ratings">Write a review for <%=@user.name %></a>
+  <%= link_to "Write a review for #{@user.name}",
+              new_rating_path(recipient_id: @user.id) %>
+
+  <p><b>Ratings for <%=@user.name %> :</b></p>
+
+  <% @received_ratings.each do |rating| %>
+    <div>
+      <p>Rating: <%= rating.rating %></p>
+      <p>Content: <%= rating.content %></p>
+    </div>
+    <hr>
+  <% end %>
+
 </div>

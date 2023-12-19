@@ -1,0 +1,16 @@
+<%= form_with(model: rating, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :rating_value %>
+    <%= form.select :rating_value, options_for_select(['1', '2', '3', '4', '5']) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t(:create_rating), class: "btn btn-primary"%>
+  </div>
+
+<% end %>

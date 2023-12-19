@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_04_193639) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_19_012948) do
   create_table "gigs", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -32,6 +32,14 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_193639) do
     t.datetime "updated_at", null: false
     t.index ["gig_id"], name: "index_notifications_on_gig_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.text "content"
+    t.integer "recipient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "rating_value"
   end
 
   create_table "users", force: :cascade do |t|
